@@ -8,11 +8,12 @@ module.exports = defineConfig({
   pageLoadTimeout: 30000,
   requestTimeout: 30000,
   e2e: {
-    testIsolation: true,
+    testIsolation: false,
     setupNodeEvents(on, config) {
       synpressPlugins(on, config);
     },
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://bridge.t1rn.io/",
     supportFile: "cypress/support/e2e.js",
   },
+  video: false
 });
